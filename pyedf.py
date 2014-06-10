@@ -16,8 +16,8 @@ def read_edf_file(fileobj):
     header = {}
     # Parse header information based on the EDF/EDF+ specs
     # http://www.edfplus.info/specs/index.html
-    header['version'] = data[0:7].strip()
-    header['patient_id'] = data[7:88].strip()
+    header['version'] = data[0:8].strip()
+    header['patient_id'] = data[8:88].strip()
     header['rec_id'] = data[88:168].strip()
     header['startdate'] = data[168:176].strip()
     header['starttime'] = data[176:184].strip()
